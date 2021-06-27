@@ -1,7 +1,7 @@
 <?php
     
-    define('DBHOST','access876198634.webspace-data.io');
-    define('DBUSER','u105148130');
+    define('DBHOST','db5003213555.hosting-data.io');
+    define('DBUSER','dbu1359438');
     define('DBPASS','_jeffSumilang2021');
     define('DBNAME','dbs2597910');
 
