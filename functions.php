@@ -1,9 +1,9 @@
 <?php
     
-    define('DBHOST','localhost');
-    define('DBUSER','root');
-    define('DBPASS','');
-    define('DBNAME','weebstream');
+    define('DBHOST','access876198634.webspace-data.io');
+    define('DBUSER','u105148130');
+    define('DBPASS','_jeffSumilang2021');
+    define('DBNAME','dbs2597910');
     
 
     function performQuery($sql){
