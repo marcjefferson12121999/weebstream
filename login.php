@@ -49,11 +49,11 @@ body {
               $_SESSION['user_info'] = $row;
             
               if($row['sumilang_type'] == "admin"){
-                // echo ("<script>location.href=http://sumilangmarc.com/admin/admin_home.php</script>");
-                header('location: admin/admin_home.php');
+                echo ("<script>location.href=http://sumilangmarc.com/admin/admin_home.php</script>");
+                // header('location: admin/admin_home.php');
               }else{
-                header('location: user/user_home.php');
-                // echo ("<script>location.href=http://sumilangmarc.com/user/user_home.php</script>");
+                // header('location: user/user_home.php');
+                echo ("<script>location.href=http://sumilangmarc.com/user/user_home.php</script>");
               }
             }else{
               echo "<script>alert('Wrong login details.')</script>";
