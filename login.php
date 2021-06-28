@@ -43,7 +43,7 @@ body {
             $password = $_POST['password'];
             // $query = "SELECT * from `accounts`";
             $query = "SELECT * FROM `accounts` WHERE `sumilang_email` = '$email' AND `sumilang_password` = '$password'";
-            if(count(fetchSpecific($query)) > 0){ 
+            if(fetchSpecific($query)){ 
               $_SESSION['login'] = true;
               $_SESSION['user_id'] = $row['sumilang_acc_id'];
               $_SESSION['user_info'] = $row;
