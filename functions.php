@@ -19,10 +19,16 @@
     function fetchAll($sql){
         $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
         $result = mysqli_query($conn, $sql);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    function fetchSpecific($sql){
+        $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+        $result = mysqli_query($conn, $sql);
         if($result){
             return mysqli_fetch_all($result, MYSQLI_ASSOC);
         }else{
-            return false;
+            return [];
         }
     }
 
