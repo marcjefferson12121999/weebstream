@@ -47,6 +47,7 @@
         <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="touch-icon" title=""></a>
         <button> <a href="forum/index.php">forum</a></button>
+        <a href="../login.php" onclick="<?php session_destroy();?>">Logout</a>
         <button name="logout" type="submit" class="btn btn-danger my-2">Logout</button>
     <?php
                 if(isset($_POST['logout'])){
