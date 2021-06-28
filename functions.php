@@ -30,7 +30,7 @@
         $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
         $result = mysqli_query($conn, $sql);
         if($result){
-            return mysqli_fetch_row($result);
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
         }else{
             return [];
         }

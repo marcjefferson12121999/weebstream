@@ -43,15 +43,17 @@ body {
             $password = $_POST['password'];
             // $query = "SELECT * from `accounts`";
             $query = "SELECT * FROM `accounts` WHERE `sumilang_email` = '$email' AND `sumilang_password` = '$password'";
-            if(fetchSpecific($query)){ 
+            if($row = fetchSpecific($query)){ 
               $_SESSION['login'] = true;
               $_SESSION['user_id'] = $row['sumilang_acc_id'];
               $_SESSION['user_info'] = $row;
             
               if($row['sumilang_type'] == "admin"){
-                echo ("<script>location.href=http://sumilangmarc.com/admin/admin_home.php</script>");
+                // echo ("<script>location.href=http://sumilangmarc.com/admin/admin_home.php</script>");
+                header('location: admin/admin_home.php');
               }else{
-                echo ("<script>location.href=http://sumilangmarc.com/user/user_home.php</script>");
+                header('location: user/user_home.php');
+                // echo ("<script>location.href=http://sumilangmarc.com/user/user_home.php</script>");
               }
             }else{
               echo "<script>alert('Wrong login details.')</script>";
