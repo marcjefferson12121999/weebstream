@@ -17,6 +17,14 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <button> <a href="forum/index.php">forum</a></button>
+  <?php
+                if(isset($_POST['logout'])){
+                    session_destroy();
+                    header('location:../login.php');
+                }
+    
+                ?>
   <!-- Favicons -->
   <!-- Favicons -->
   <link href="../assets/img/image-icon/favicon.png" rel="icon">
