@@ -39,8 +39,8 @@ body {
       <?php
       
         if(isset($_POST['signin'])){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $email = $_POST['sumilang_email'];
+            $password = $_POST['sumilang_password'];
             
             $query = "SELECT * from `accounts`";
             if(count(fetchAll($query)) > 0){ 
