@@ -41,38 +41,20 @@ body {
         if(isset($_POST['signin'])){
             $email = $_POST['email'];
             $password = $_POST['password'];
-
-            echo "email: " . $email;
-            echo "password: " . $password;
-            
-            echo "<br/>";
-            $query = "SELECT * from `accounts`";
+            // $query = "SELECT * from `accounts`";
+            $query = "SELECT * FROM `accounts` WHERE `sumilang_email` = $email AND `sumilang_password` = $password";
             if(count(fetchAll($query)) > 0){ 
-                  foreach(fetchAll($query) as $row){
-                    
-            echo "row: ";
-            echo print_r($row);
-            echo "<br/>";
+              $_SESSION['login'] = true;
+              $_SESSION['user_id'] = $row['sumilang_acc_id'];
+              $_SESSION['user_info'] = $row;
             
-            echo $row['sumilang_email'];
-            echo $row['sumilang_password'];
-
-                    // if($row['sumilang_email']==$email&&$row['sumilang_password']==$password){
-                    //     $_SESSION['login'] = true;
-                    //     $_SESSION['user_id'] = $row['sumilang_acc_id'];
-                    //     $_SESSION['user_info'] = $row;
-                      
-                    //     if($row['sumilang_type'] == "admin"){
-                    //       header('location:admin/admin_home.php');
-                    //     }else{
-                    //       header('location:user/user_home.php');
-                    //     }
-                    // }else{
-                    //     echo "<script>alert('Wrong login details.')</script>";
-                    // }
-                }
+              if($row['sumilang_type'] == "admin"){
+                header('location:admin/admin_home.php');
+              }else{
+                header('location:user/user_home.php');
+              }
             }else{
-                echo "<script>alert('Error.')</script>";
+              echo "<script>alert('Wrong login details.')</script>";
             }
 
         }
