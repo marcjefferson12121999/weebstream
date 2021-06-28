@@ -41,23 +41,35 @@ body {
         if(isset($_POST['signin'])){
             $email = $_POST['email'];
             $password = $_POST['password'];
+
+            echo "email: " . $email;
+            echo "password: " . $password;
             
+            echo "<br/>";
             $query = "SELECT * from `accounts`";
             if(count(fetchAll($query)) > 0){ 
                   foreach(fetchAll($query) as $row){
-                    if($row['sumilang_email']==$email&&$row['sumilang_password']==$password){
-                        $_SESSION['login'] = true;
-                        $_SESSION['user_id'] = $row['sumilang_acc_id'];
-                        $_SESSION['user_info'] = $row;
+                    
+            echo "row: ";
+            echo print_r($row);
+            echo "<br/>";
+            
+            echo $row['sumilang_email'];
+            echo $row['sumilang_password'];
+
+                    // if($row['sumilang_email']==$email&&$row['sumilang_password']==$password){
+                    //     $_SESSION['login'] = true;
+                    //     $_SESSION['user_id'] = $row['sumilang_acc_id'];
+                    //     $_SESSION['user_info'] = $row;
                       
-                        if($row['sumilang_type'] == "admin"){
-                          header('location:admin/admin_home.php');
-                        }else{
-                          header('location:user/user_home.php');
-                        }
-                    }else{
-                        echo "<script>alert('Wrong login details.')</script>";
-                    }
+                    //     if($row['sumilang_type'] == "admin"){
+                    //       header('location:admin/admin_home.php');
+                    //     }else{
+                    //       header('location:user/user_home.php');
+                    //     }
+                    // }else{
+                    //     echo "<script>alert('Wrong login details.')</script>";
+                    // }
                 }
             }else{
                 echo "<script>alert('Error.')</script>";
