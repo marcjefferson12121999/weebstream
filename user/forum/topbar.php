@@ -44,6 +44,7 @@ include 'db_connect.php';
           <li class="nav-about"><a href="index.php?page=about">About</a></li>
      
           <li class="nav-about"><a href="index.php?page=manage_post">request content</a></li>
+          <li class="nav-about"><a href="../user_home.php">back</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
