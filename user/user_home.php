@@ -17,14 +17,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <button> <a href="forum/index.php">forum</a></button>
-  <?php
-                if(isset($_POST['logout'])){
-                    session_destroy();
-                    header('location:../login.php');
-                }
-    
-                ?>
+ 
   <!-- Favicons -->
   <!-- Favicons -->
   <link href="../assets/img/image-icon/favicon.png" rel="icon">
@@ -53,6 +46,14 @@
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="touch-icon" title=""></a>
+        <button> <a href="admin_home.php">Home</a></button>
+    <?php
+                if(isset($_POST['logout'])){
+                    session_destroy();
+                    header('location:../login.php');
+                }
+    
+                ?>
       </div>
 
       
