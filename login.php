@@ -51,9 +51,11 @@ body {
             
               if($row['sumilang_type'] == "admin"){
                 // echo ("<script>location.href=http://sumilangmarc.com/admin/admin_home.php</script>");
+                header("Status: 301 Moved Permanently");
                 header('location: http://sumilangmarc.com/admin/admin_home.php');
                 exit;
               }else{
+                header("Status: 301 Moved Permanently");
                 header('location: http://sumilangmarc.com/user/user_home.php');
                 exit;
                 // echo ("<script>location.href=http://sumilangmarc.com/user/user_home.php</script>");
