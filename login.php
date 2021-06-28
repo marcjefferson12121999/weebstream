@@ -50,8 +50,10 @@ body {
             
               if($row['sumilang_type'] == "admin"){
                 header('location:admin/admin_home.php');
+                exit;
               }else{
                 header('location:user/user_home.php');
+                exit;
               }
             }else{
               echo "<script>alert('Wrong login details.')</script>";
