@@ -43,19 +43,20 @@ body {
             $password = $_POST['password'];
             // $query = "SELECT * from `accounts`";
             $query = "SELECT * FROM `accounts` WHERE `sumilang_email` = $email AND `sumilang_password` = $password";
-            if(count(fetchSpecific($query)) > 0){ 
-              $_SESSION['login'] = true;
-              $_SESSION['user_id'] = $row['sumilang_acc_id'];
-              $_SESSION['user_info'] = $row;
+            print_r(fetchSpecific($query));
+            // if(count(fetchSpecific($query)) > 0){ 
+            //   $_SESSION['login'] = true;
+            //   $_SESSION['user_id'] = $row['sumilang_acc_id'];
+            //   $_SESSION['user_info'] = $row;
             
-              if($row['sumilang_type'] == "admin"){
-                header('location:admin/admin_home.php');
-              }else{
-                header('location:user/user_home.php');
-              }
-            }else{
-              echo "<script>alert('Wrong login details.')</script>";
-            }
+            //   if($row['sumilang_type'] == "admin"){
+            //     header('location:admin/admin_home.php');
+            //   }else{
+            //     header('location:user/user_home.php');
+            //   }
+            // }else{
+            //   echo "<script>alert('Wrong login details.')</script>";
+            // }
 
         }
       
