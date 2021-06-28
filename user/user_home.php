@@ -46,7 +46,8 @@
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="touch-icon" title=""></a>
-        <button> <a href="admin_home.php">Home</a></button>
+        <button> <a href="forum/index.php">forum</a></button>
+        <button name="logout" class="btn btn-danger my-2">Logout</button>
     <?php
                 if(isset($_POST['logout'])){
                     session_destroy();
