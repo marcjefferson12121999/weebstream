@@ -49,10 +49,10 @@ body {
               $_SESSION['user_info'] = $row;
             
               if($row['sumilang_type'] == "admin"){
-                header('location: /admin/admin_home.php');
+                header('location: /admin/admin_home.php',TRUE,301);
                 exit;
               }else{
-                header('location: /user/user_home.php');
+                header('location: /user/user_home.php',TRUE,301);
                 exit;
               }
             }else{
