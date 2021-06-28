@@ -1,4 +1,10 @@
-
+<?php
+    session_start(); //we need session for the log in thingy XD 
+    include("../../functions.php");
+    if($_SESSION['login']!==true){
+        header('location:../login.php');
+    }
+?>
 <?php 
 include 'db_connect.php';
 
