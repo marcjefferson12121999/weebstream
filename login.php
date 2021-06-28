@@ -39,17 +39,17 @@ body {
       <?php
       
         if(isset($_POST['signin'])){
-            $password = $_POST['password'];
             $email = $_POST['email'];
-            $query = "SELECT * from `accounts`;";
-            if(count(fetchAll($query)) > 0){ //this is to catch unknown error.
+            $password = $_POST['password'];
+            
+            $query = "SELECT * from `accounts`";
+            if(count(fetchAll($query)) > 0){ 
                   foreach(fetchAll($query) as $row){
                     if($row['sumilang_email']==$email&&$row['sumilang_password']==$password){
                         $_SESSION['login'] = true;
                         $_SESSION['user_id'] = $row['sumilang_acc_id'];
                         $_SESSION['user_info'] = $row;
-                        // $_SESSION['sumilang_firstname'] = $row['sumilang_firstname'];
-                        // $_SESSION['sumilang_lastname'] = $row['sumilang_lastname'];
+                      
                         if($row['sumilang_type'] == "admin"){
                           header('location:admin/admin_home.php');
                         }else{
