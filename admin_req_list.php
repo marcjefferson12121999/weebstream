@@ -48,7 +48,7 @@
              </strong>
           </a>
             <div class="pull-right">
-                <?php
+            <?php
                 if(isset($_POST['logout'])){
                     session_destroy();
                     header('location:login.php');
