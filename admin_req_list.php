@@ -46,7 +46,7 @@
                 ?>    
                              
              </strong>
-          </a>
+          
             <div class="pull-right">
             <?php
                 if(isset($_POST['logout'])){
