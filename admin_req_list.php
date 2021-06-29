@@ -48,14 +48,19 @@
              </strong>
           </a>
             <div class="pull-right">
-  
+                <?php
+                if(isset($_POST['logout'])){
+                    session_destroy();
+                    header('location:login.php');
+                }
+    
+                ?>
                 <form method="post">
                 <button> <a href="admin/admin_home.php">Home</a></button>
                 <button> <a href="admin_req_list.php">Requests</a></button>
                 <button><a href="admin_acc_list.php">Accounts</a></button>
-                
+                    <button name="logout" class="btn btn-danger my-2">Logout</button>
                 </form>
-                <button name=<a href="login.php" onclick="<?php session_destroy();?>">Logout</a>
             </div>
         </div>
       </div>
