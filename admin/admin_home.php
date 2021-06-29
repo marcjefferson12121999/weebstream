@@ -47,13 +47,7 @@
              </strong>
           </a>
             <div class="pull-right">
-                <?php
-                if(isset($_POST['logout'])){
-                    session_destroy();
-                    header('location:../login.php');
-                }
-    
-                ?>
+              
                 <form method="post">
                 <button> <a href="admin_home.php">Home</a></button>
                 <button> <a href="../admin_req_list.php">Requests</a></button>
