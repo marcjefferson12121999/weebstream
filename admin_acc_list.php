@@ -65,8 +65,9 @@
                 <button> <a href="admin/admin_home.php">Home</a></button>
                 <button> <a href="admin_req_list.php">Requests</a></button>
                 <button><a href="admin_acc_list.php">Accounts</a></button>
-                <button name=<a href="login.php" onclick="<?php session_destroy();?>">Logout</a>
+               
                 </form>
+                <button name=<a href="login.php" onclick="<?php session_destroy();?>">Logout</a>
             </div>
         </div>
       </div>
