@@ -46,7 +46,7 @@
                 ?>    
                              
              </strong>
-          
+          </a>
             <div class="pull-right">
             <?php
                 if(isset($_POST['logout'])){
@@ -59,13 +59,8 @@
                 <button> <a href="admin/admin_home.php">Home</a></button>
                 <button> <a href="admin_req_list.php">Requests</a></button>
                 <button><a href="admin_acc_list.php">Accounts</a></button>
-                    <button name="logout" class="btn btn-danger my-2">Logout <?php
-                if(isset($_POST['logout'])){
-                    session_destroy();
-                    header('location:login.php');
-                }
-    
-                ?></button>
+                <button name="logout" class="btn btn-danger my-2">
+                <a href="login.php">Logout</a></button>
                 </form>
             </div>
         </div>
