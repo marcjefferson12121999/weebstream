@@ -50,7 +50,7 @@
                 <?php
                 if(isset($_POST['logout'])){
                     session_destroy();
-                    header('location:../login.php');
+                    
                 }
     
                 ?>
@@ -58,7 +58,7 @@
                 <button> <a href="admin_home.php">Home</a></button>
                 <button> <a href="../admin_req_list.php">Requests</a></button>
                 <button><a href="../admin_acc_list.php">Accounts</a></button>
-                    <button name="logout" class="btn btn-danger my-2">Logout</button>
+                    <button name="logout" class="btn btn-danger my-2" href ="../login.php">Logout</button>
                 </form>
             </div>
         </div>
