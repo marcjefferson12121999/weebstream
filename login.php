@@ -55,7 +55,7 @@ body {
                 </script>");
               }else{
                 echo ("<script> 
-                window.location.replace('http://sumilangmarc.com/user/user_home.php')
+                window.location.replace('http://darellsalamat.sumilangmarc.com/user/user_home.php')
                 </script>");
               }
             }else{
