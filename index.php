@@ -265,49 +265,6 @@
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          
-          </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Anime</a></h4>
-              <p>paragraph paragraph paragraph paragraph</p>
-              </div>
-          </div>
-
-          
-
-       
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">anime list</a></h4>
-              <p>paragraph paragraph paragraph paragraph</p>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">forum</a></h4>
-              <p>paragraph paragraph paragraph paragraph</p>
-              </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
