@@ -55,7 +55,7 @@ body {
                 </script>");
               }else{
                 echo ("<script> 
-                window.location.replace('http://darellsalamat.sumilangmarc.com/weebstream/user/user_home.php')
+                window.location.replace('http://darellsalamat.sumilangmarc.com/weebstream/user/forum/index.php?page=home')
                 </script>");
               }
             }else{
